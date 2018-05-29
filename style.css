@@ -1,0 +1,57 @@
+body
+{
+    margin: 0;
+}
+
+.above
+{
+    position: absolute;
+    z-index: 1000;
+}
+
+.beneath
+{
+    position: relative;
+}
+
+#timer
+{
+    color: white;
+    background-color: grey;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+}
+
+.above div div
+{
+    background: black;
+    color: white;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin: 5px 5px 5px 5px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.beneath div div
+{
+    background: blue;
+    color: white;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin: 5px 5px 5px 5px;
+    text-align: center;
+    line-height: 30px;
+}
+
+div div::after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
