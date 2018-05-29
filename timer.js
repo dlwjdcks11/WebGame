@@ -1,6 +1,12 @@
 var timer = document.getElementById("timer");
-var start = document.getElementById("1");
 var h = 0, m = 0, s = 0, ms = 0;
+
+for(var i = 0; i < 25; i++) {
+    if(document.getElementById(i + 1).innerHTML === "1") {
+        var index = i + 1;
+        break;
+    }
+}
 
 function setTime() {
     ms++;
@@ -25,6 +31,6 @@ function setTime() {
 
 function stopWatch() {
     var t = setTimeout(setTime, 10);
-} stopWatch();
+}
 
-start.onclick = stopWatch;
+document.getElementById(index).addEventListener('click', stopWatch);
